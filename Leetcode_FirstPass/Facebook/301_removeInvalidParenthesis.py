@@ -18,6 +18,7 @@ class Solution(object):
             if count >= 0: continue    
             for j in range(last_j, i+1): # need remove
                 if s[j] == pair[1] and (j == last_j or s[j-1] != pair[1]):
+                    # remove s[j] = ')', pass in the res substring into the recursion call again
                     self.remove(res, s[:j]+s[j+1:], i, j, pair)
             return # this is not a valid string
 

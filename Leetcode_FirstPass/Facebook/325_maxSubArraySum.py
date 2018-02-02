@@ -7,6 +7,7 @@ class Solution(object):
         """
         if not nums: return 0
         
+        # ### need to put in the 0: -1
         dic = {0:-1}
         res = 0
         

@@ -14,9 +14,11 @@ class Solution(object):
         if n < 2: return -1
         celebrity = 0
         for i in range(1, n):
+            # if celebrity knows i, set celebrity = i
             if knows(celebrity, i):
                 celebrity = i
-                
+        
+        # if the celebrity dose not found
         for i in range(n):
             if i != celebrity and (knows(celebrity, i) or not knows(i, celebrity)): return -1
         return celebrity

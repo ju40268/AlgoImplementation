@@ -22,7 +22,7 @@ class Solution(object):
 
     def helper(self, num):
         if num == 0: return ""
-        elif num < 20: return self.lessThan20[num%20] + " "
+        elif num < 20: return self.lessThan20[num % 20] + " "
         elif num < 100:
             return self.tens[num / 10] + " " + self.helper(num % 10)
         else:

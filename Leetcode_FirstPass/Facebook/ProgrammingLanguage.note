@@ -1,0 +1,46 @@
+isZero(n):
+	
+
+and(isZero(sub n m)(isZero(sub m n)))
+
+fac(n):
+	if n == 0:
+		return 1
+	else:
+	 n * fac(n-1)
+
+=====>
+
+fact = lambda n (isZero n) 1 (times n ( fact (p n)))
+having fact on both side?
+
+fact 5 = 5 times fact 4 ==> but no recursion?
+
+G_fact = lamda f lambda n (isZero n) 1 times n ( f(p n))
+=> now f is bound var
+fact = G_fact(fact) -> fix point => input放入得到一樣的output
+	 = G_fact_infinite(f)
+fact = fix(G_fact)
+
+ex.
+	f(x) = 6 - x
+	fix point = 3
+
+ex. 
+	h(x) = x
+	fix point = any point
+
+fact 5 = fix(G_fact) 5 
+
+hfact = lamba f lambda n if isZero(n) then 1 else n*f(f)(n-1) --> call its 
+hfact hfact' 5
+
+fix point, generator function
+
+C, Java ->(translate) -> lambda calculus
+"Denotational Semantics"
+
+[fix point]
+f(x) = x
+fix(f) = x
+f(f(f(...))) -> infinite -> go back to self
