@@ -1,4 +1,5 @@
 class Solution {
+    // O( 2 ^ n), O(n)
     public static List<List<String>> partition(String s) {
         List<List<String>> res = new ArrayList<>();
         helper(res, new ArrayList<>(), s);
@@ -21,6 +22,7 @@ class Solution {
 
     private static boolean isPalindrome(String s) {
         int l = 0;
+        // careful it's s.length()-1 not s.length()
         int r = s.length()-1;
         while (l < r){
             if (s.charAt(l++) != s.charAt(r--)) return false;
