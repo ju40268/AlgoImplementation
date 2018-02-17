@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-d3@0.1.0"></script>
+    <script src="vue.js"></script>
+</head>
+<!-- full demo here: https://emiliorizzo.github.io/vue-d3-network/ -->
+<!--<body>-->
+<!--<div id="app">-->
+    <!--<div class="title">-->
+        <!--<h1> <a href="https://github.com/emiliorizzo/vue-d3-network">vue-d3-network</a> </h1>-->
+        <!--&lt;!&ndash; example control &ndash;&gt;-->
+        <!--<ul class="menu">-->
+            <!--<li>-->
+                <!--<label> Node size  </label>-->
+                <!--<input type="range" min="1" max="100" v-model='nodeSize' /> {{ options.nodeSize }}-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<label>Render as  </label>-->
+                <!--<input type="radio" :value='false' v-model='canvas' />-->
+                <!--<label>SVG</label>-->
+                <!--<input type="radio" :value='true' v-model='canvas' />-->
+                <!--<label>Canvas</label>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<d3-network ref='net' :net-nodes="nodes" :net-links="links" :options="options" />-->
+<!--</div>-->
+<!--</body>-->
+<body>
+<div id="app">
+    <d3-force-graph></d3-force-graph>
+</div>
+</body>
+</html>

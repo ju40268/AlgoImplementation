@@ -1,0 +1,57 @@
+LinkedList Operations
+
+1. Reverse
+
+
+2. Merge
+
+    private static ListNode merge(ListNode p, ListNode q) {
+        ListNode dummy = new ListNode(-1);
+        ListNode current = dummy;
+        while (p != null && q != null){
+            if (p.val < q.val){
+                current.next = new ListNode(p.val);
+                p = p.next;
+            }else {
+                current.next = new ListNode(q.val);
+                q = q.next;
+            }
+            current = current.next;
+        }
+        if (p != null) current.next = p;
+        if (q != null) current.next = q;
+        return dummy.next;
+    }
+
+3. Remove/ Insert
+4. Fast Slow pointer
+  
+  - Find middle
+	
+	private static ListNode getMiddle(ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode fast = head, slow = head;
+        while (fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+  - Find circle
+
+  	public boolean hasCycle(ListNode head) {
+        if (head == null || head.next == null) return false;
+        ListNode slow = head, fast = head;
+        while (fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) return true;
+        }
+        return false;
+    }
+
+
+5. Dummy Node, Current Node
+6. While end condition
+7. Other Classic
