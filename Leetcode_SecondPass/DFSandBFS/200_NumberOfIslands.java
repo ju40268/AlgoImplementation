@@ -1,4 +1,5 @@
 class Solution {
+    // O(mn), O(n)
     public static int numIslands(char[][] grid) {
         int res = 0;
         int m = grid.length;
